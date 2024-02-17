@@ -1,0 +1,21 @@
+{
+    "name": "fitnessapi",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.mjs",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "run:dev": "nodemon ./src/index.mjs",
+        "run": "node ./src/index.mjs"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^3.0.3"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
+    },
+    "type": "module"
+}
