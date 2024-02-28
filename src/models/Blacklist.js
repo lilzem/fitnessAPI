@@ -1,13 +1,13 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const BlacklistSchema = new mongoose.Schema(
-  {
-    token: {
-      type: String,
-      required: true,
-      ref: "User",
-    },
-  },
-  { timestamps: true },
+	{
+		token: {
+			type: String,
+			required: true,
+			ref: 'User',
+		},
+	},
+	{ timestamps: true }
 );
-export default mongoose.model("blacklist", BlacklistSchema);
+export default mongoose.model('blacklist', BlacklistSchema);
