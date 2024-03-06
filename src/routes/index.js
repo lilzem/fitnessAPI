@@ -1,10 +1,12 @@
 import express from 'express'; // import the express module
 
 import Auth from './auth.js';
+import Training from './trainings.js';
 import { Verify } from '../middleware/verify.js';
 
 const app = express(); // Create an app object
 app.use('/api/auth', Auth);
+app.use('/api', Training);
 
 app.disable('x-powered-by'); // Reduce fingerprinting (optional)
 // home route with the get method and a handler
@@ -28,6 +30,11 @@ app.get('/api/user', Verify, (req, res) => {
 		status: 'success',
 		message: 'Welcome to the your Dashboard!',
 	});
+});
+
+app.use((req, res, next) => {
+	console.log(req.body);
+	next();
 });
 
 export default app;
